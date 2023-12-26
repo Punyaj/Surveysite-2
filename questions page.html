@@ -16,10 +16,29 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
          body{
-    background-color: #A1CCD1;
+   
     background-image: url(images/Home.png);
 
   }
+  .rating-container {
+    text-align: center;
+    margin: 0;
+}
+
+.rating-stars {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.star {
+    color: #ccc;
+    margin: 0 5px;
+}
+
+.star:hover,
+.star.active {
+    color: #ffcc00;
+}
         .login-container {
             background-color: #fff;
             padding: 20px;
@@ -44,13 +63,16 @@
             border-collapse: collapse;
             margin-bottom: 20px;
             border: 1px solid #ddd;
-
+            
         }
-
+         tr {
+            border-bottom: 1px solid #ddd;
+    margin-bottom: 20px; /* Adjust this value to increase or decrease the space between rows */
+}
         th,
         td {
             padding: 10px;
-            text-align: left;
+           
         }
 
         th {
@@ -92,21 +114,7 @@ button:hover{
                     <img src="images/logo.png" width="130" height="40" alt="">
                 </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon "></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto justify-content-end">
-                        <li class="nav-item pl-3">
-                            <a class="nav-link " style="color: rgb(11, 62, 88); font-weight: bold;" href="index.html">Home</a>
-                        </li>
-
-                        <li class="nav-item pl-3">
-                            <a class="nav-link" style="color: rgb(11, 62, 88); font-weight: bold;" href="Contact.html">Contact </a>
-                        </li>
-                    </ul>
-                </div>
+               
             </nav>
         </div>
     </section>
@@ -117,31 +125,62 @@ button:hover{
                     <div class="form-group">
                         <h3 class=" pb-3 text-center"  style="font-family: 'Lora', serif;font-weight:700; color: rgb(11, 62, 88); font-size: 3rem;">Questions</h3>
 
-                        <form action="#" method="post">
-                            
-                        <table>
-                            <tr>
-                                <th>Question</th>
-                                <th>Rating</th>
-                            </tr>
-                            <tr>
-                                <td>1) Did you find the session informative?</td>
-                                <td><input type="number" min="0" max="4" value="0"></td>
-
-                            </tr>
-                            <tr>
-                                <td>2) Was the session interactive?</td>
-                                <td><input type="number" min="0" max="4" value="0"></td>
-                            </tr>
-                            <tr>
-                                <td>3) Will you recommend the session to others?</td>
-                                <td><input type="number" min="0" max="4" value="0"></td>
-                            </tr>
-
-                        </table>
-<br><br><br>
-
-                        <button type="submit">Submit</button>
+                        <form action="#" method="post" id="ratingForm">
+                            <table>
+                                <tr>
+                                    <th>Question</th>
+                                    <th style="text-align: center;" > Rating</th>
+                                </tr>
+                                <tr >
+                                    <td>1) Did you find the session informative?</td>
+                                    <td>
+                                        <div class="rating-container">
+                                            <div class="rating-stars">
+                                                <span class="star" data-rating="1">&#9733;</span>
+                                                <span class="star" data-rating="2">&#9733;</span>
+                                                <span class="star" data-rating="3">&#9733;</span>
+                                                <span class="star" data-rating="4">&#9733;</span>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="rating1" value="0"> <!-- Hidden input to store the selected rating -->
+                                    </td>
+                                </tr>
+                                <ul></ul>
+                                <tr>
+                                    
+                                    <td>2) Was the session interactive?</td>
+                                    <td>
+                                        <div class="rating-container">
+                                            <div class="rating-stars">
+                                                <span class="star" data-rating="1">&#9733;</span>
+                                                <span class="star" data-rating="2">&#9733;</span>
+                                                <span class="star" data-rating="3">&#9733;</span>
+                                                <span class="star" data-rating="4">&#9733;</span>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="rating2" value="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3) Will you recommend the session to others?</td>
+                                    <td>
+                                        <div class="rating-container">
+                                            <div class="rating-stars">
+                                                <span class="star" data-rating="1">&#9733;</span>
+                                                <span class="star" data-rating="2">&#9733;</span>
+                                                <span class="star" data-rating="3">&#9733;</span>
+                                                <span class="star" data-rating="4">&#9733;</span>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="rating3" value="0">
+                                    </td>
+                                </tr>
+                            </table>
+                        
+                            <br><br><br>
+                          
+                            <button type="submit" class="mx-auto align-items-center text-center" style="width: 7rem; font-weight:620; border-radius: 7px;">Submit</button>
+                        
                         </form>
                     </div>
                 </div>
@@ -163,6 +202,38 @@ button:hover{
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    const ratingForms = document.querySelectorAll('.rating-container');
+
+    ratingForms.forEach(form => {
+        const stars = form.querySelectorAll('.star');
+        const input = form.querySelector('input[type="hidden"]');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function () {
+                const rating = this.getAttribute('data-rating');
+                resetStars();
+                highlightStars(rating);
+                input.value = rating;
+            });
+        });
+
+        function resetStars() {
+            stars.forEach(star => {
+                star.classList.remove('active');
+            });
+        }
+
+        function highlightStars(rating) {
+            for (let i = 0; i < rating; i++) {
+                stars[i].classList.add('active');
+            }
+        }
+    });
+});
+
+            </script>
 </body>
 
 </html>
