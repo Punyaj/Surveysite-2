@@ -21,28 +21,34 @@
 
   }
   .rating-container {
-    text-align: center;
-    margin: 0;
-}
+        text-align: center;
+        margin: 0;
+    }
 
-.rating-stars {
-    font-size: 24px;
-    cursor: pointer;
-}
+    .rating-boxes {
+        font-size: 24px;
+        cursor: pointer;
+    }
 
-.star {
-    color: #ccc;
-    margin: 0 5px;
-}
+    .box {
+        border: 1px solid #ccc;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
 
-.star:hover,
-.star.active {
-    color: #ffcc00;
-}
+    .box:hover,
+    .box.active {
+        background-color: #ffcc00;
+    }
         .login-container {
             background-color: #fff;
             padding: 20px;
-            border-radius: 8px;
+            
             box-shadow: 0 0 15px rgba(11, 62, 88, 0.504);
         }
 
@@ -66,8 +72,7 @@
             
         }
          tr {
-            border-bottom: 1px solid #ddd;
-    margin-bottom: 20px; /* Adjust this value to increase or decrease the space between rows */
+            border-bottom: 1px solid #ddd; /* Adjust this value to increase or decrease the space between rows */
 }
         th,
         td {
@@ -76,11 +81,11 @@
         }
 
         th {
-            background-color:rgb(44, 139, 161);
+            background-color:rgb(255, 255, 255);
             color: #fff;
         }
 
- 
+       
 
         button{
   background-color: rgb(44, 139, 161);
@@ -121,66 +126,77 @@ button:hover{
     <section style="margin-top: 5rem; ">
         <form action="thankyou.html">
             <div class="row mt-5 mx-auto justify-content-center">
-                <div class="col-md-10 col-10 login-container">
+                <div class="col-md-10 col-12 login-container">
                     <div class="form-group">
-                        <h3 class=" pb-3 text-center"  style="font-family: 'Lora', serif;font-weight:700; color: rgb(11, 62, 88); font-size: 3rem;">Questions</h3>
-
+                       
+                        
+                        <h3 class=" pb-2 pt-2 text-center "  style="font-family: 'Lora', serif;font-weight:500; color: rgb(13, 13, 13); font-size: 2rem; border-bottom:2px solid #ddd;border-top:2px solid #ddd ; border-bottom-width: 50%;">Question 1 of 20</h3>
+                        <p class="pb-4 pt-5 text-center" style="font-size: 20px;">When faced with a challenge, I prefer to:</p>
                         <form action="#" method="post" id="ratingForm">
                             <table>
                                 <tr>
-                                    <th>Question</th>
-                                    <th style="text-align: center;" > Rating</th>
-                                </tr>
-                                <tr >
-                                    <td>1) Did you find the session informative?</td>
+                                    <td>1)Choose the appropriate answer as quickly as possible and get going</td>
                                     <td>
                                         <div class="rating-container">
-                                            <div class="rating-stars">
-                                                <span class="star" data-rating="1">&#9733;</span>
-                                                <span class="star" data-rating="2">&#9733;</span>
-                                                <span class="star" data-rating="3">&#9733;</span>
-                                                <span class="star" data-rating="4">&#9733;</span>
+                                            <div class="rating-boxes" data-question="1">
+                                                <span class="box" data-rating="1">1</span>
+                                                <span class="box" data-rating="2">2</span>
+                                                <span class="box" data-rating="3">3</span>
+                                                <span class="box" data-rating="4">4</span>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="rating1" value="0"> <!-- Hidden input to store the selected rating -->
+                                        <input type="hidden" name="rating1" value="0">
                                     </td>
                                 </tr>
                                 <ul></ul>
                                 <tr>
-                                    
-                                    <td>2) Was the session interactive?</td>
+                                    <td>2)Collect all possible details and information that can lead to a right solution </td>
                                     <td>
                                         <div class="rating-container">
-                                            <div class="rating-stars">
-                                                <span class="star" data-rating="1">&#9733;</span>
-                                                <span class="star" data-rating="2">&#9733;</span>
-                                                <span class="star" data-rating="3">&#9733;</span>
-                                                <span class="star" data-rating="4">&#9733;</span>
+                                            <div class="rating-boxes" data-question="2">
+                                                <span class="box" data-rating="1">1</span>
+                                                <span class="box" data-rating="2">2</span>
+                                                <span class="box" data-rating="3">3</span>
+                                                <span class="box" data-rating="4">4</span>
                                             </div>
                                         </div>
                                         <input type="hidden" name="rating2" value="0">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>3) Will you recommend the session to others?</td>
+                                    <td>3)Find a solution that will make everyone happy </td>
                                     <td>
                                         <div class="rating-container">
-                                            <div class="rating-stars">
-                                                <span class="star" data-rating="1">&#9733;</span>
-                                                <span class="star" data-rating="2">&#9733;</span>
-                                                <span class="star" data-rating="3">&#9733;</span>
-                                                <span class="star" data-rating="4">&#9733;</span>
+                                            <div class="rating-boxes" data-question="3">
+                                                <span class="box" data-rating="1">1</span>
+                                                <span class="box" data-rating="2">2</span>
+                                                <span class="box" data-rating="3">3</span>
+                                                <span class="box" data-rating="4">4</span>
                                             </div>
                                         </div>
                                         <input type="hidden" name="rating3" value="0">
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>4)Look for answers that come within using my creativity</td>
+                                    <td>
+                                        <div class="rating-container">
+                                            <div class="rating-boxes" data-question="4">
+                                                <span class="box" data-rating="1">1</span>
+                                                <span class="box" data-rating="2">2</span>
+                                                <span class="box" data-rating="3">3</span>
+                                                <span class="box" data-rating="4">4</span>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="rating4" value="0">
+                                    </td>
+                                </tr>
                             </table>
-                        
-                            <br><br><br>
-                          
-                            <button type="submit" class="mx-auto align-items-center text-center" style="width: 7rem; font-weight:620; border-radius: 7px;">Submit</button>
-                        
+                
+                            <br><br>
+                           <div class="text-center">
+                            <button type="submit" class="mx-auto align-items-center text-center" style="width: 8rem; font-weight:620; border-radius: 7px;">Confirm</button>
+                        </div>
                         </form>
                     </div>
                 </div>
@@ -203,35 +219,36 @@ button:hover{
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-    const ratingForms = document.querySelectorAll('.rating-container');
+        document.addEventListener('DOMContentLoaded', function () {
+        const ratingBoxes = document.querySelectorAll('.box');
 
-    ratingForms.forEach(form => {
-        const stars = form.querySelectorAll('.star');
-        const input = form.querySelector('input[type="hidden"]');
-
-        stars.forEach(star => {
-            star.addEventListener('click', function () {
+        ratingBoxes.forEach(box => {
+            box.addEventListener('click', function () {
                 const rating = this.getAttribute('data-rating');
-                resetStars();
-                highlightStars(rating);
-                input.value = rating;
+                const question = this.closest('.rating-boxes').getAttribute('data-question');
+                resetBoxes(question);
+                highlightBox(question, rating);
+                updateInput(question, rating);
             });
         });
 
-        function resetStars() {
-            stars.forEach(star => {
-                star.classList.remove('active');
+        function resetBoxes(question) {
+            const boxes = document.querySelectorAll(`.rating-boxes[data-question="${question}"] .box`);
+            boxes.forEach(box => {
+                box.classList.remove('active');
             });
         }
 
-        function highlightStars(rating) {
-            for (let i = 0; i < rating; i++) {
-                stars[i].classList.add('active');
-            }
+        function highlightBox(question, rating) {
+            const box = document.querySelector(`.rating-boxes[data-question="${question}"] .box[data-rating="${rating}"]`);
+            box.classList.add('active');
         }
-    });
-});
+
+        function updateInput(question, rating) {
+            const input = document.querySelector(`input[name="rating${question}"]`);
+            input.value = rating;
+        }
+    });  
 
             </script>
 </body>
