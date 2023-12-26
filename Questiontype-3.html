@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h2>Quiz Questions</h2>
+
+    <form action="#" method="post">
+        <div class="question">
+            <p>1. What is the color of the Taj Mahal?</p>
+            <label><input type="radio" name="q1" value="a">a) White</label>
+            <label><input type="radio" name="q1" value="b">b) Red</label>
+            <label><input type="radio" name="q1" value="c">c) Blue</label>
+            <label><input type="radio" name="q1" value="d">d) Green</label>
+        </div>
+
+        <div class="question">
+            <p>2. Who is John Wick?</p>
+            <label><input type="radio" name="q2" value="a">a) A chef</label>
+            <label><input type="radio" name="q2" value="b">b) A musician</label>
+            <label><input type="radio" name="q2" value="c">c) A detective</label>
+            <label><input type="radio" name="q2" value="d">d) An assassin</label>
+        </div>
+
+        <div class="question">
+            <p>3. Who is Gojo?</p>
+            <label><input type="radio" name="q3" value="a">a) A superhero</label>
+            <label><input type="radio" name="q3" value="b">b) A chef</label>
+            <label><input type="radio" name="q3" value="c">c) A teacher</label>
+            <label><input type="radio" name="q3" value="d">d) A scientist</label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
